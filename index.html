@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Implementar código javascript a los formularios.">
+    <title>Validación con formularios con JS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <form id="contacto-frm" name="contacto_frm" action="" method="get" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+        <legend>Contacto</legend>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre_txt" type="text">
+        <br><br>
+        <label for="edad">Edad:</label>
+        <input id="edad" name="edad_txt" type="text">
+        <br><br>
+        <label for="email">Email:</label>
+        <input id="email" name="email_txt" type="text">
+        <br><br>
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" name="telefono_txt" type="text">
+        <br><br>
+        <label for="cd">Código Postal de España:</label>
+        <input id="cd" name="cd_txt" type="text">
+        <br><br>
+        <label for="dni">NIF:</label>
+        <input id="dni" name="dni_txt" type="text">
+        <br><br>
+        <label for="nie">NIE, documento de identificación para extranjeros:</label>
+        <input id="nie" name="nie_txt" type="text">
+        <br><br>
+        <label for="ps">Pasaporte:</label>
+        <input id="ps" name="ps_txt" type="text">
+        <br><br>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="F" name="sexo_rdo" value="F" >
+        <label for="F">Femenino</label>
+        <input type="radio" id="M" name="sexo_rdo" value="M">
+        <label for="M">Masculino</label>
+        <br><br>
+        <label for="asunto">Asunto:</label>
+        <input id="asunto" name="asunto_txt" type="text">
+        <br><br>
+        <label for="comentarios">Comentarios:</label>
+        <br>
+        <textarea name="comentarios_txa" id="comentarios" cols="50" rows="5"></textarea>
+        <br><br>
+        <input name="enviar_btn" id="enviar" type="button" value="Enviar" >
+        <input  name="limpiar_btn" id="limpiar" type="button" value="Limpiar">
+    </fieldset>
+
+  </form>
+    <script src="js/form.js"></script>
+</body>
+</html>
