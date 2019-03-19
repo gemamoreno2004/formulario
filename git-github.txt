@@ -1,0 +1,177 @@
+GIT--------------------------
+
+Comandos básicos
+
+git init ->  Para iniciar un proyecto de init
+
+git add <file> --> Se  usa para pasar los archivo del working directory al staging area.
+
+git status  --> Para saber si tu archivos estan en el working directory o en el staging area.
+
+git commit --> Para pasarlo del staging area al repositorio. / Crea un primer snapshot.
+
+git push --> Para subirlo a un repositorio remoto.
+
+git pull --> Si estas trabajando con otros desarrolladores te trae los campos que han realizado los otros desarrolladores.
+
+git clone --> Te hace una copia del servidor a tu sitio.
+
+
+
+Tenemos que entender que GIT
+tiene tres estados
+
+
+working directory (que es donde yo trabajo con mis archivos)
+
+staging area (donde yo acrego todos los archivos que voy a preparar para el guardado)
+
+repository (Cuando ya estamos preparados para nuestra primera versión de los archivos los traemos aquí)
+
+
+
+
+
+INICIANDO----------------------------------------
+
+
+Una vez que tenemos la carpeta en nuestro escritorio que deseamos subir.
+
+(Con el botón secundario abrir bash here)
+
+Y también abro el Git bash.
+
+Para ver donde estoy puedo escribir 
+
+pwd --> Para saber donde estoy
+
+cd desktop
+
+cd nombre_de_la_carpeta
+
+
+ls----> Para que me diga lo hay donde estoy
+
+
+git init---> Aquí ya me crea la carpeta dentro del proyecto llamada punto git.
+
+
+git status--> Para ver los archivos que tenemos.
+
+
+git add-> index.html
+
+git add .   -> Para añadir todos los archivos que hay dentro de la carpeta.
+
+
+Una vez que hemos añadido algun archivo ya le podemos añadir el primer snapchat.
+
+Si tenemos archivos que no queremos subir al repositorio tenemos que crear un archivo con la
+siguiente extensión.
+
+Creamos un archivo cuya extensión es
+
+	.gitignore
+
+Y dentro de él escribimos el nombre de la carpeta que deseamos que ignore.
+
+datos
+
+Si se trata de un archivo escribimos la extensión rr.txt
+
+Luego hay que añadir dicho archivo.
+
+git add .gitignore
+
+
+git commit-> Para hacer la primera instantanea. Git nos preguntará quienes somos.
+
+Escribe una letra e o i para que nos deje escribir.
+
+Finalmente aparece escribir wq
+ 
+----------------------git -m "He agregado un gitignore" -----------------------------
+
+
+Creamos un espacio después de las comillas y luego enter y nos ahorramos entrar en el editor horrible.
+
+
+Arriba aparecen los comandos para configurarlos.
+
+git config --global user.email "gemamoreno2004@gmail.com"
+
+
+
+git config --global user.name  "Gema"
+
+
+Si volvemos a dar git status.
+
+Entonces veremos que no hay nada que commit.
+
+Pero si hacemos algún cambio en algun archivo como por ejemplo en el index.html
+
+Me avisará.
+
+git checkout -- index.html     --> De este modo se descartan los cambios. Pero no puedo grabarlos. Simplemente se borran.
+
+git diff index.html   --> Para que me muestre en pantalla las diferencias entre el cambio que he hecho y el git html
+
+
+
+git add index.html    ---> También escribo esto para añadir los nuevos cambios.
+
+
+
+git commit       ------------> De esta manera me guarda una instantanea de una nueva versión.
+
+CUando hacemos estos hay que añadir la letra i para que nos deje escribir una frase
+
+
+
+git log    ---> Nos muestra la distintan instantaneas que tenemos. 
+
+
+git branch ---> Sirve para hacer ramificaciones. EN un principio solo nos va a mostrar una carpeta que dice master.
+
+Para ello vamos a crear una que se llame ramona, por ejemplo
+
+
+git branch ramona  --> Y me crea una versión alternativa con ese nombrre.
+
+
+git checkout ramona  --> Y me estaría moviendo a ramona.
+
+Como estoy dentro de ramona puedo empezar a crear modificaciones en mi carpeta. Adañir archivos nuevos y carpetas etc.
+
+
+git checkout master --> Y volveríamos a la rama master
+
+
+
+
+Abrimos el repositorio desde github.
+
+Vamos a la pestaña de repositorio y le damos new
+
+	- Le damos un nombre
+
+	- Le añadimos una descripción.
+
+
+Y ya le demas a Create repository.
+
+Nos da una serie de códigos pero casi todos ya los hemos hechos.
+
+git remote add origin https://github.com/gemamoreno2004/formulario.git
+
+
+Y eso lo pongo en el bash.
+
+Luego añado 
+
+git push -u origin master
+
+
+
+
